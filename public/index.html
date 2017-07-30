@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js'></script>
+	<script type="text/javascript" src='controllers/controller.js'></script>
+</head>
+<body ng-app='myApp' ng-controller="myCtrl">
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>
+				Name
+				</th>
+				<th>
+				Name
+				</th>
+				<th>
+				Name
+				</th> 
+				<th>
+				Action
+				</th> 
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td colspan="" rowspan="" headers=""><input type="text" name="" class='form-control' ng-model='contact.name'></td>
+			<td colspan="" rowspan="" headers=""><input type="text" name="" class='form-control' ng-model='contact.email'></td>
+			<td colspan="" rowspan="" headers=""><input type="text" name="" class='form-control' ng-model='contact.mobNo'></td>
+			<td colspan="" rowspan="" headers=""><button type="button" class="btn btn-primary" ng-click='addContact()'>Add Contacts</button></td>
+			<td colspan="" rowspan="" headers=""><button type="button" class="btn btn-info" ng-click='update()'>Update</button></td>
+
+		</tr>
+			<tr ng-repeat='obj in contactList'>
+				<td colspan="" rowspan="" headers="">{{obj.name}}</td>
+				<td colspan="" rowspan="" headers="">{{obj.email}}</td>
+				<td colspan="" rowspan="" headers="">{{obj.mobNo}}</td>
+				<td><button type="button" class='btn btn-danger' ng-click='remove(obj._id)'>Remove</button>	</td>
+				<td><button type="button" class='btn btn-warning' ng-click='edit(obj._id)'>Edit</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+welcom to home page
+<input type="text" name="fname" ng-model='fname'>
+<h1>{{fname}}</h1>
+</body>
+</html>
